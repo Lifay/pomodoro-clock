@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomodoro clock</title>
+  <link rel="stylesheet" type="text/css" href="assets/pomodoro.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/pomodoro.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+      <h1>Pomodoro Clock</h1>
+
+    </header>
+
+    <main>
+      <section id="setTimersSection">
+
+        <!-- button to set the break time -->
+
+        <div>
+
+          <h2>Break Time</h2>
+
+          <section class="setTime" id="break">
+            <button id="decreaseBreakTime" class="setTimerButton">-</button>
+            <p id="breakTime"></p>
+            <button id="increaseBreakTime" class="setTimerButton">+</button>
+          </section>
+
+        </div>
+        <div>
+          <button id="resetTimers">Reset timers</button>
+        </div>
+        <!-- button to set the work time -->
+
+        <div>
+          <h2>Session Time</h2>
+
+          <section class="setTime" id="session">
+            <button id="decreaseSessionTime" class="setTimerButton">-</button>
+            <p id="sessionTime"></p>
+            <button id="increaseSessionTime" class="setTimerButton">+</button>
+          </section>
+
+        </div>
+      </section>
+
+      <!-- the clock itself -->
+
+      <section id="clock">
+        <h2 id="clockHeader">Session</h2>
+        <button id="startTimer">Go!</button>
+        <button id="stopTimer">Stop!</button>
+        <div id="clockTimer">
+          <p id="timer"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>

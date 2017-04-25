@@ -1,0 +1,96 @@
+* {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FEE1E0;
+}
+
+.container {
+  width: 500px;
+  margin: 25vh auto;
+  background-color: #E7190E;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+ }
+
+h1 {
+  margin: 0;   
+  padding: 10px 0;
+  background-color: #008811;  
+  color: white;
+}
+
+#setTimersSection {
+  display:flex; 
+  flex-direction: row;
+  justify-content: space-around;  
+}
+
+.setTime {
+  background-color: #008811;
+  color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  width: 150px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#setBreakTime {
+  display: flex;
+  justify-content: space-around;
+}
+
+#resetTimers {  
+  align-self: center;
+  padding: 5px 10px;
+  margin-top: 75px;
+}
+
+#clock {
+  padding-bottom: 20px;
+}
+
+#timer {
+  background-color: #008811;
+  border: 2px dotted black;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100px;
+  color: white;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+button {
+  border: none;
+}
+
+#decreaseSessionTime,
+#decreaseBreakTime {
+  padding: 1px 8px;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .container {
+      width: 90%;
+      margin: 40px auto;
+    }
+
+    .setTime {
+      width: 80px;      
+    }
+
+    #resetTimers {
+      padding: 2px 5px;
+      margin-top: 100px;
+    }
+};
