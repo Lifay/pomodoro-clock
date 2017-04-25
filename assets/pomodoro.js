@@ -87,8 +87,8 @@ $(document).ready(function () {
   //Start the Timer
   $("#startTimer").on("click", function () {
     if (!timerIsRunning) {
-      //countDown *= 60;
-      breakCountDown *= 60;
+      countDown *= 60;
+      //breakCountDown *= 60;
       timerIsRunning = true;
     }
 
@@ -110,14 +110,13 @@ $(document).ready(function () {
 
     function timer() {
       session = true;      
-      $("#clockHeader").html("Session");
-      // $("#timer").html(countDown);      
+      $("#clockHeader").html("Session");      
       countDown -= 1;
 
       if (countDown < 0) {
         audio.play();
         clearInterval(counter);
-        breakCountDown = breakTimeCount;
+        breakCountDown = breakTimeCount * 60;
         breakTimer = setInterval(breakCounter, 1000);
       } else if (countDown % 60 >= 10) {
         $("#timer").html(`${Math.floor(countDown / 60)}:${countDown % 60}`);
@@ -134,7 +133,7 @@ $(document).ready(function () {
       if (breakCountDown < 0) {
         audio.play();
         clearInterval(breakTimer);
-        countDown = sessionTimeCount;
+        countDown = sessionTimeCount * 60;
         counter = setInterval(timer, 1000);
       } else if (breakCountDown % 60 >= 10) {
         $("#timer").html(`${Math.floor(breakCountDown / 60)}:${breakCountDown % 60}`);
